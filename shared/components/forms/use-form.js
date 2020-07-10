@@ -38,7 +38,7 @@ export default function useForm({
 		} catch (err) {
 			setStatus({
 				Message: STATUSES.ERROR,
-				Response: err
+				Response: err.data.message
 			})
 			return
 		}
