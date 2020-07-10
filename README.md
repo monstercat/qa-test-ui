@@ -6,6 +6,7 @@ This project runs on Node.Js. You must install it before trying to run the proje
 First, run the development server:
 
 ```bash
+npm i
 npm run dev
 ```
 
