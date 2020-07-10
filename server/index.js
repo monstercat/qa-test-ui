@@ -32,7 +32,11 @@ const Routes = {
 				Email,
 				Password
 			} = payload || {}
-			
+
+			// Randomly, server will go down.
+			const goDown = Math.random()
+			if (goDown < 0.6) throw ""
+
 			if (!Email || !Password) throw createError(400, "Invalid email or password")
 			if (Email !== "email@monstercat.com" && Password !== "123") {
 				throw createError(400, "Invalid email or password")
