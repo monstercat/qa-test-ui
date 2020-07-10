@@ -1,29 +1,57 @@
-## Note to QAs:
-This project runs on Node.Js. You must install it before trying to run the project. You can download it and run it locally in your machine.
+# Monstercat QA Role Test
 
-## Getting Started
+This is a test which is to be performed by candidates for the QA Role in the technology team at Monstercat.
 
-First, run the development server:
+## Preperation
+
+ * Have [Git](https://git-scm.com/) installed on your local machine.
+ * Ensure you have [Node.js](https://nodejs.org/en/download/) installed on your local machine and are familiar with it.
+ * Please use the latest version of [Chrome](https://www.google.com/chrome/) to assess the test.
+
+## Project Setup
+
+Please perform the following steps in your choice of terminal to setup the project.
 
 ```bash
+git clone git@github.com:monstercat/qa-test-ui.git
+cd qa-test-ui
 npm i
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
+Navigate to [http://localhost:3000](http://localhost:3000) in Chrome to open the project.
 
+## 2 Portion Test
 
-## Topics of this exercise:
+This test contains 2 portions. The first is performed in person during the interview while the second half is a take home exam which you will be given 96 hours to complete.
 
-1) We would like you to install this project on your local machine, and once it is running, please create a Google Sheet containing:
+### Part 1 - In Person
 
-	A)	Documentation of all the test cases that, in your opinion, should be performed for each section of this project.
+For the first portion of these test we would like you to install and run the project and start assessing the latest version of a new login page we have built. It is your responsibility to run through it to find any bugs and report them. 
 
-	B) 	The steps you took to perform tests in each section. Try to be as clear as you can and tell us what test methodologies/details/exceptions you've considered.
+During the live portion please do the following:
 
-	C) 	A list with proper recording of the bugs you've found. It must include at least: Title, Bug Description, Criticality (High, Medium, Low), and any other complementary information you may find relevant for the developers that will have it fixed.
+ * Record bugs you encounter into a Google Spreadsheet. Be as descriptive as possible, treat this as if it had the same functionality as other bug reporting software. Add as many columns as needed.
+ * Use Chrome Developer Tools to debug and find issues in the code. Please make suggestions for fixes via bug report in the sheet.
+ * If desired, provide a fix to the source code.
+ * Talk us through your thought processes of how you are assessing the process. Include any methodologies, practices, and execptions you have thought of.
+ * Take any notes of how you may create test cases for problems you encounter for future testing.
+ 
+Please refer to the Application Expectations below to understand how the application should be behaving correctly.
+ 
+### Part 2 - Take Home
 
-2) Include to this GitHub project one or more automated navigation tests. You can use any tool you prefer (Selenium, Cypress, etc.). They must be fully functional.
+Given that you have spent some time debugging and finding issues with our new software it would be a good idea to automate your job so you can speed up manual work in the future. From the notes you've gather beforehand please choose an automated test suite software that fits your needs and design a series of tests. Some suggestions include Selenium, Cypress, Saucelabs. If possible please include documentation with the tests you implement.
 
+Once you have implemented your tests and are confident with them please send us an email with your work and a written up response to your implementation. Please include details about your approach, the decisions you made (and why), and what tests are included. You can send your work to tech@monstercat.com
 
-3) When finished, please send the documents and codes you've created to tech@monstercat.com.
+## Application Expectations
+
+This project includes a basic login page for a new piece of software we are building. The development team has just does it's first round of work on the sofware and it needs review. It is expected to work in the following details below.
+
+ 1. There is a login box that requires a user's email and password to proceed when they click the "Login" button.
+ 2. When a user is logged in and they access "/home" they should see the successful login page.
+ 3. There should be a functioning "Logout" button on the "/home" page.
+ 4. The server should be making calls to "/login", "/logout", and "/me" in accordance with the API spec we have designed.
+ 5. The user should not run into any issues or lost pages by means of natural interaction with the application.
+ 
