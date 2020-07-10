@@ -1,0 +1,34 @@
+@sizes: 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
+
+each(@sizes, {
+		.mt-@{value} {
+			margin-top: unit(@value, px);
+		}
+	}
+);
+
+each(@sizes, {
+		.mb-@{value} {
+			margin-bottom: unit(@value, px);
+		}
+	}
+);
+
+each(@sizes, {
+		.ml-@{value} {
+			margin-left: unit(@value, px);
+		}
+	}
+);
+
+each(@sizes,
+		{
+		.mr-@{value} {
+			margin-right: unit(@value, px);
+		}
+	}
+);
+
+.text-center {
+	text-align: center;
+}

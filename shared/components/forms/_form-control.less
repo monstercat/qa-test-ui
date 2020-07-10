@@ -1,0 +1,57 @@
+@import "../../css/_variables.less";
+
+
+.form-control {
+	font-family: inherit;
+	display: block;
+	width: 100%;
+	height: 3em;
+	padding: 0.375em 0.75em;
+	font-size: 1em;
+	line-height: 1.5;
+	color: #333;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #f0f0f0;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+	&:hover {
+		border-color: #ccc;
+	}
+}
+
+.form-control.list-input-control {
+	padding-top: 9px;
+}
+
+.form-control:focus {
+	color: #333;
+	background-color: #fff;
+	border-color: @primary-light;
+	outline: 0;
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-control-sm {
+	height: calc(1.8125rem + 2px);
+	font-size: 0.75rem;
+	line-height: 1.5;
+	border-radius: 0.2rem;
+}
+
+.form-control-lg {
+	height: calc(2.875rem + 2px);
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+}
+
+.form-control:focus {
+	border: 1px solid @primary-light
+}
+
+.form-control-sm {
+	font-size: 0.8rem;
+}
