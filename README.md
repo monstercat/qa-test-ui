@@ -52,6 +52,6 @@ This project includes a basic login page for a new piece of software we are buil
  1. There is a login box that requires a user's email and password to proceed when they click the "Login" button.
  2. When a user is logged in and they access "/home" they should see the successful login page.
  3. There should be a functioning "Logout" button on the "/home" page.
- 4. The server should be making calls to "/login", "/logout", and "/me" in accordance with the API spec we have designed.
+ 4. The application should be making calls to "/login", "/logout", and "/me" in accordance with the API spec we have designed.
  5. The user should not run into any issues or lost pages by means of natural interaction with the application.
  
