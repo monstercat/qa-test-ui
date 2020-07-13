@@ -58,7 +58,18 @@ function getRoute(method, url) {
 }
 
 export default async function call(method, url, payload) {
-	const route = getRoute(method, url)
-	if (!route) throw createError(404, "Not Found")
-	return await route(payload)
+	try{
+		const route = getRoute(method, url)
+		if (!route) throw createError(404, "Not Found")
+		const resp = await route(payload)
+		console.log('[Mock Server]', method, url, 200, resp)
+		return resp
+	}catch (err) {
+		if (!err) {
+			console.log('[Mock Server]', method, url, 500, err)
+		} else {
+			console.log('[Mock Server]', method, url, err.status, err)
+		}
+		throw err
+	}
 }
