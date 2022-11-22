@@ -25,7 +25,7 @@ Navigate to [http://localhost:3000](http://localhost:3000) in Chrome to open the
 
 This test contains 2 portions. The first is performed in person during the interview while the second half is a take home exam which you will be given 96 hours to complete.
 
-### Part 1 - In Person
+### Part 1
 
 For the first portion of these test we would like you to install and run the project and start assessing the latest version of a new login page we have built. It is your responsibility to run through it to find any bugs and report them. 
 
@@ -39,7 +39,7 @@ During the live portion please do the following:
  
 Please refer to the Application Expectations below to understand how the application should be behaving correctly.
  
-### Part 2 - Take Home
+### Part 2
 
 Given that you have spent some time debugging and finding issues with our new software it would be a good idea to automate your job so you can speed up manual work in the future. From the notes you've gather beforehand please choose an automated test suite software that fits your needs and design a series of tests. Some suggestions include Selenium, Cypress, Saucelabs. If possible please include documentation with the tests you implement.
 
